@@ -1,0 +1,210 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using static UnityEngine.InputSystem.InputAction;
+
+public class UIManager : MonoBehaviour
+{
+    #region Parameters
+
+    [Header("Game over")]
+    [SerializeField]
+    private GameObject gameOverScreen;
+
+    [SerializeField]
+    private AudioClip gameOverSound;
+
+    [Header("Pause")]
+    [SerializeField]
+    private GameObject pauseScreen;
+
+    [SerializeField]
+    private float volumeChangeIncrement;
+
+    [SerializeField]
+    public int firstLevelBuildIndex;
+
+    [Header("Dialogue")]
+    [SerializeField]
+    private GameObject dialogueBox;
+
+    [Header("Game end")]
+    [SerializeField]
+    private GameObject gameEndScreen;
+
+    private PlayerInput playerInput;
+    private PlayerMovement playerMovement;
+    private LevelTimer levelTimer;
+
+    #endregion
+
+    #region Init
+    private void Awake()
+    {
+        gameOverScreen.SetActive(false);
+        pauseScreen.SetActive(false);
+        gameEndScreen.SetActive(false);
+
+        playerInput = FindAnyObjectByType<PlayerInput>();
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
+        levelTimer = FindAnyObjectByType<LevelTimer>();
+
+        playerInput.onActionTriggered += (context) =>
+        {
+            if (context.action.name == InputActionConstants.UI.InputActionCancel)
+                OnCancel(context);
+        };
+    }
+
+    #endregion
+
+    #region Input management
+
+    private void OnCancel(CallbackContext context)
+    {
+        if (context.control.device is Mouse || !context.started)
+            return;
+
+        if (pauseScreen.activeInHierarchy)
+            ShowPauseScreen(false);
+        else
+            ShowPauseScreen(true);
+    }
+
+    #endregion
+
+    #region MainMenu
+
+    public void NewGame()
+    {
+        RestartGame();
+    }
+
+    public void ContinueGame()
+    {
+        int levelToLoad = PlayerPrefs.GetInt(PlayerPrefsConstants.LevelBuildIndex, firstLevelBuildIndex);
+        SceneManager.LoadScene(levelToLoad);
+    }
+
+    #endregion
+
+    #region Game over
+
+    public void ShowGameOver()
+    {
+        Debug.Log($"Show game over screen pausing game");
+        this.PauseGame(true);
+        SoundManager.Instance.PlaySound(gameOverSound);
+        gameOverScreen.SetActive(true);
+    }
+
+    #endregion
+
+    #region Pause
+
+    public void ShowPauseScreen(bool enabled)
+    {
+        if (!IsDialogeBoxShowing())
+        {
+            Debug.Log($"Show pause screen pausing game: {enabled}");
+            PauseGame(enabled); // will be unpaused when dialogue is closed
+        }
+        pauseScreen.SetActive(enabled);
+    }
+
+    public void SoundEffectVolume()
+    {
+        SoundManager.Instance.ChangeSoundEffectVolume(volumeChangeIncrement);
+    }
+
+    public void MusicVolume()
+    {
+        SoundManager.Instance.ChangeMusicVolume(volumeChangeIncrement);
+    }
+
+    #endregion
+
+    #region Game end
+
+    public void ShowGameEnd(bool enabled)
+    {
+        Debug.Log($"Show game end pausing game: {enabled}");
+        PauseGame(enabled);
+        gameEndScreen.SetActive(enabled);
+    }
+
+    #endregion
+
+    #region UI functions
+
+    public void SaveGame()
+    {
+        // Use a dedicated serializer to persist other player data
+        PlayerPrefs.SetInt(PlayerPrefsConstants.LevelBuildIndex, SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(firstLevelBuildIndex);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit(); // only works on build
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // exits play mode in editor
+#endif
+    }
+
+    public void PauseGame(bool enabled)
+    {
+        if (enabled)
+        {
+            Debug.Log("Game is paused");
+            Time.timeScale = 0.0f;
+
+            // make sure no animation can take place while on pause
+            if (playerMovement != null)
+                playerMovement.enabled = false;
+            if (levelTimer != null)
+                levelTimer.enabled = false;
+        }
+        else
+        {
+            Debug.Log("Game is unpaused");
+            Time.timeScale = 1.0f;
+
+            if (playerMovement != null)
+                playerMovement.enabled = true;
+            if (levelTimer != null)
+                levelTimer.enabled = true;
+        }
+    }
+
+    public bool IsPauseScreenShowing()
+    {
+        return pauseScreen.activeInHierarchy;
+    }
+
+    public bool IsGameOverScreenShowing()
+    {
+        return gameOverScreen.activeInHierarchy;
+    }
+
+    public bool IsGameEndingScreenShowing()
+    {
+        return gameEndScreen.activeInHierarchy;
+    }
+
+    public bool IsDialogeBoxShowing()
+    {
+        return dialogueBox.activeInHierarchy;
+    }
+
+    #endregion
+}
