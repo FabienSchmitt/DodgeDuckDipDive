@@ -4,13 +4,15 @@ using UnityEngine;
 public class Cloud : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] bool goingLeft = true;
     [SerializeField] BoxCollider2D boxCollider;
+    [SerializeField] GameObject player;
 
 
     void Update()
     {
-        var direction = goingLeft ? Vector3.left : Vector3.right;
+        var birdGoingRight = player.transform.localScale.x > 0;
+
+        var direction = birdGoingRight ? Vector3.left : Vector3.right; // clouds go the opposite way.
         this.transform.position += direction * speed * Time.deltaTime;
     }
 }

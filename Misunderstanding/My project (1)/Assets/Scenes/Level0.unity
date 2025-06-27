@@ -188,6 +188,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
+--- !u!1 &1027728862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4595453673938776456, guid: 3a831a0dacbf6f44aa66c3a79572995b, type: 3}
+  m_PrefabInstance: {fileID: 4199863151303687720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1170019844
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1564333291}
+  - component: {fileID: 1564333292}
   m_Layer: 0
   m_Name: Level0Manager
   m_TagString: Untagged
@@ -306,6 +312,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1564333292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564333290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584acdfdede45ac4fb3ecbb4a797aa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudPrefab: {fileID: 5158925452183210425}
+  birdGoingRight: 1
+  spawnTime: 0.5
+  player: {fileID: 1027728862}
 --- !u!1001 &1589275493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,11 +464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7424559476173625105, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.57
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 7424559476173625105, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 7424559476173625105, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
       propertyPath: m_LocalPosition.z
@@ -480,11 +502,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7452740308424105585, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
+      propertyPath: bird
+      value: 
+      objectReference: {fileID: 1027728862}
+    - target: {fileID: 7452740308424105585, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1027728862}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
+--- !u!1 &5158925452183210425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3371008461623880742, guid: e8fca6c2dbfbe7a40b65bf5eb2ac4578, type: 3}
+  m_PrefabInstance: {fileID: 5158925452183210424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
