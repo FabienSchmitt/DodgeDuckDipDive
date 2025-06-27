@@ -22,7 +22,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueTextLines = dialogueInput;
         gameObject.SetActive(true);
-        playerInput.SwitchCurrentActionMap("UI");
     }
 
     private void Awake()
@@ -91,7 +90,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            playerInput.SwitchCurrentActionMap("Player");
             gameObject.SetActive(false);
             Debug.Log("Dialogue box is unpausing game");
             uiManager.PauseGame(false);
