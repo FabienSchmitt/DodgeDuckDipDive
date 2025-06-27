@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5646564332169823995}
   m_Layer: 0
   m_Name: Cloud
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  goingLeft: 1
   boxCollider: {fileID: 2608245490061654050}
+  player: {fileID: 4595453673938776456, guid: 3a831a0dacbf6f44aa66c3a79572995b, type: 3}
 --- !u!61 &2608245490061654050
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (context.action.name == InputActionConstants.Player.InputActionMove)
                 OnMove(context);
+            if (context.action.name == InputActionConstants.Player.InputActionJump)
+                ChangeDirection(context);
         };
     }
 
@@ -55,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
         {
             StopMoving();
         }
+    }
+
+    private void ChangeDirection(CallbackContext context)
+    {
+        transform.localScale = new Vector2(-this.transform.localScale.x, transform.localScale.y); 
+        motionDirection = new Vector2(-motionDirection.x, motionDirection.y);
     }
 
     private void StopMoving()
