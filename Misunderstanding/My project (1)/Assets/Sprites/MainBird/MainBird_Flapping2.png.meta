@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 145e1f631f0de4c4ea4f94d0b22cbcc7
+guid: 8c7c74ba4270ec441b3ee7eba417f6b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7434547768829376768
-    second: MainBird_Flapping2_0
+      213: -818304222253376845
+    second: MainBird_Flapping2 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainBird_Flapping2_0
+      name: MainBird_Flapping2 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 633
-        height: 561
+        x: 3
+        y: 2
+        width: 628
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0097fba4ec1dc2760800000000000000
-      internalID: 7434547768829376768
+      spriteID: 3ba926a35acc4a4f0800000000000000
+      internalID: -818304222253376845
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MainBird_Flapping2_0: 7434547768829376768
+      MainBird_Flapping2 1_0: -818304222253376845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
