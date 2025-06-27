@@ -29,6 +29,9 @@ public class Level0Manager : MonoBehaviour
         Vector3 pos = new Vector3(Random.value + offset, Random.value, 10);
         pos = Camera.main.ViewportToWorldPoint(pos);
 
-        Instantiate(cloudPrefab, pos, Quaternion.identity);
+        var cloudObject = Instantiate(cloudPrefab, pos, Quaternion.identity);
+        var cloudBehavior = cloudObject.GetComponent<CloudMovement>();
+        cloudBehavior.Initialize(player);
+
     }
 }

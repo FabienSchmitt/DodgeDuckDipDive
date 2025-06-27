@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7424559476173625105}
   - component: {fileID: 4639633629568664130}
-  - component: {fileID: 7452740308424105585}
   - component: {fileID: 2608245490061654050}
   - component: {fileID: 5646564332169823995}
+  - component: {fileID: 3972554450443011913}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Obstacle
@@ -90,21 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7452740308424105585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3371008461623880742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf62c769d0b889e4eab9fefef447cd02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  boxCollider: {fileID: 2608245490061654050}
-  player: {fileID: 4595453673938776456, guid: 3a831a0dacbf6f44aa66c3a79572995b, type: 3}
 --- !u!61 &2608245490061654050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +163,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &3972554450443011913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371008461623880742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf62c769d0b889e4eab9fefef447cd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  boxCollider: {fileID: 2608245490061654050}
