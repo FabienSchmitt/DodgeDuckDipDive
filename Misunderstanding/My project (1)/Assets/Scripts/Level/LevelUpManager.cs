@@ -52,7 +52,6 @@ public class LevelUpManager : MonoBehaviour
         if (uiManager.IsDialogeBoxShowing())
             return; // wait until dialogbox is closed to show other screens
         levelTimer.enabled = false;
-        //SoundManager.Instance.PlaySound(victorySound);
         victoryMessage.text = GetLevelEndingMessage();
         StartCoroutine(ShowGameEnding());
     }

@@ -283,6 +283,7 @@ MonoBehaviour:
   playerMotion: 0
   rigidbody2D: {fileID: 755670590642425133}
   flappingSound: {fileID: 8300000, guid: 05e25ce8ebf3a9545bc668ca535a16a5, type: 3}
+  movingSound: {fileID: 8300000, guid: 47e1a04e3b48f424b853ad0ec5354ad0, type: 3}
 --- !u!114 &1881246626395886577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 9052135550999889930}
+  obstacleCollisionSound: {fileID: 8300000, guid: 45389a5b6bfb771499b25217a49d995f, type: 3}
+  encounterBirdSound: {fileID: 8300000, guid: b0c4ec37f322b1b4098ccd16fc233719, type: 3}
+  planetReachedSound: {fileID: 8300000, guid: 061c828595e6ae2489b3d83f054df7bc, type: 3}
 --- !u!114 &3946020804286339353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,3 +312,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef7aa9a548a6964aa6a61292c5f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionSound: {fileID: 8300000, guid: a29968f037ca9c84794bdd8bdd1ec991, type: 3}

@@ -4,6 +4,10 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] BoxCollider2D boxCollider;
+    [SerializeField] AudioClip obstacleCollisionSound;
+    [SerializeField] AudioClip encounterBirdSound;
+    [SerializeField] AudioClip planetReachedSound;
+
     UIManager uiManager;
     DialogueManager dialogueManager;
     private void Awake()
@@ -16,6 +20,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
+            SoundManager.Instance.PlaySound(obstacleCollisionSound);
             uiManager.ShowGameOver();
         }
     }
@@ -30,10 +35,12 @@ public class PlayerCollision : MonoBehaviour
 
             encounterBirdManager.EncounterDone = true;
             encounterBirdManager.enabled = false;
+            SoundManager.Instance.PlaySound(encounterBirdSound);
             dialogueManager.ShowDialogue(encounterBirdManager.GetDialogueMessage());
         }
         else if (collision.gameObject.tag == "Planet")
         {
+            SoundManager.Instance.PlaySound(planetReachedSound);
             var planetManager = collision.gameObject.GetComponent<PlanetManager>();
             dialogueManager.ShowDialogue(planetManager.GetPlanetIsReachedMessage());
             planetManager.SetPlanetReached();

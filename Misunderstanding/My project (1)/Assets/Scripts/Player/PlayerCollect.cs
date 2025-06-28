@@ -2,6 +2,8 @@
 
 public class PlayerCollect : MonoBehaviour
 {
+    [SerializeField] AudioClip collectionSound;
+
     private LevelTimer levelTimer;
 
     private void Awake()
@@ -13,6 +15,7 @@ public class PlayerCollect : MonoBehaviour
     {
         if (collision.gameObject.tag == "SpaceGear")
         {
+            SoundManager.Instance.PlaySound(collectionSound);
             levelTimer.AddSeconds(10);
             Destroy(collision.gameObject);
         }

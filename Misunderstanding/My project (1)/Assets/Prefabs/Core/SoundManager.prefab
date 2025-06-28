@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5cfb0a29be0c24a9756984730a2f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMusicVolume: 0.2
+  maxSoundEffectsVolume: 1
 --- !u!1 &2954147407140659243
 GameObject:
   m_ObjectHideFlags: 0
