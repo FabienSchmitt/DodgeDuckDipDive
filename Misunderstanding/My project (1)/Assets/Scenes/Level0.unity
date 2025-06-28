@@ -500,7 +500,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &826699860
+--- !u!21 &880507123
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564333290}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 584acdfdede45ac4fb3ecbb4a797aa0d, type: 3}
   m_Name: 
