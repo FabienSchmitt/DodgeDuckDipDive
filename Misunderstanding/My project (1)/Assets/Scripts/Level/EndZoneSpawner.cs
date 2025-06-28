@@ -46,10 +46,19 @@ public class EndZoneSpawner : MonoBehaviour
         // player cannot change direction anymore
         playerMovement.CanChangeDirection = false;
 
-        var playerGoingRight = player.transform.localScale.x > 0;
-        float offset = playerGoingRight ? 1.1f : -1.1f;
-        Vector3 pos = new Vector3(UnityEngine.Random.value + offset, 0.5f, 10); // should spawn in the middle of the screen
-        pos = Camera.main.ViewportToWorldPoint(pos);
+        Vector3 pos = Vector3.zero;
+        if (playerMovement.playerMotion == PlayerMotion.Vertical)
+        {
+            var playerGoingRight = player.transform.localScale.x > 0;
+            float offset = playerGoingRight ? 1.1f : -1.1f;
+            pos = new Vector3(UnityEngine.Random.value + offset, 0.5f, 10); // should spawn in the middle of the screen
+            pos = Camera.main.ViewportToWorldPoint(pos);
+        }
+        else if (playerMovement.playerMotion == PlayerMotion.Horizontal)
+        {
+            pos = new Vector3(0.5f, 1.5f, 10);
+            pos = Camera.main.ViewportToWorldPoint(pos);
+        }
 
         endZone.transform.position = pos;
         var movement = endZone.GetComponent<SpawnObjectMovement>();

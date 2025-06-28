@@ -152,6 +152,8 @@ MonoBehaviour:
   scrollSpeed: 2
   resetPositionX: -50
   startPositionX: -35
+  resetPositionY: -20
+  startPositionY: 20
 --- !u!4 &93433656
 Transform:
   m_ObjectHideFlags: 0
@@ -931,7 +933,7 @@ MonoBehaviour:
   playerGoingRight: 0
   spawnTime: 4
   player: {fileID: 1027728862}
---- !u!21 &2017606556
+--- !u!21 &1787648355
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
