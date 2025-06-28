@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 58524300799727851}
   - component: {fileID: 755670590642425133}
   - component: {fileID: 9052135550999889930}
+  - component: {fileID: 3098474344949926741}
   - component: {fileID: 7606169849091869342}
   - component: {fileID: 1881246626395886577}
-  - component: {fileID: 3098474344949926741}
+  - component: {fileID: 3946020804286339353}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -244,6 +245,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.3979495, y: 4.4797044}
   m_EdgeRadius: 0
+--- !u!95 &3098474344949926741
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595453673938776456}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5acef5ccdfbcd3342b371cca9a7d63b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7606169849091869342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,25 +297,15 @@ MonoBehaviour:
   boxCollider: {fileID: 9052135550999889930}
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
---- !u!95 &3098474344949926741
-Animator:
-  serializedVersion: 7
+--- !u!114 &3946020804286339353
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4595453673938776456}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5acef5ccdfbcd3342b371cca9a7d63b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef7aa9a548a6964aa6a61292c5f9c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

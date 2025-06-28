@@ -21,7 +21,7 @@ public class Level0Manager : MonoBehaviour
 
     private void Start()
     {
-        //dialogueManager.ShowDialogue(GetLevelStartDialogue()); // TODO: UNCOMMENT
+        dialogueManager.ShowDialogue(GetLevelStartDialogue());
     }
 
     private void Update()

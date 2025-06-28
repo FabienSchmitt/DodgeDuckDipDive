@@ -19,6 +19,6 @@ public class PlanetManager : MonoBehaviour
 
     private void Awake()
     {
-        levelUpManager = FindObjectOfType<LevelUpManager>();
+        levelUpManager = FindAnyObjectByType<LevelUpManager>();
     }
 }
