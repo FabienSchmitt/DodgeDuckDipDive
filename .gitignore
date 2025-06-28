@@ -88,5 +88,7 @@ Library/
 obj/
 Temp/
 UserSettings/
+Cainos/
+Pixel_Skies_DEMO/
 
 *.vsconfig
