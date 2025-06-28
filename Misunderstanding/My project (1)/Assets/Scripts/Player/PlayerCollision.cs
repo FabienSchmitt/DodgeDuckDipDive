@@ -24,9 +24,13 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "EncounterBird")
         {
-            var encounterBirdTextManager = collision.gameObject.GetComponent<EncounterBirdTextManager>();
-            dialogueManager.ShowDialogue(encounterBirdTextManager.GetDialogueMessage());
-            encounterBirdTextManager.enabled = false;
+            var encounterBirdManager = collision.gameObject.GetComponent<EncounterBirdManager>();
+            if (encounterBirdManager.EncounterDone) // fixes a bug when dialogue not pausing quick enough and collision being entered twice
+                return;
+
+            encounterBirdManager.EncounterDone = true;
+            encounterBirdManager.enabled = false;
+            dialogueManager.ShowDialogue(encounterBirdManager.GetDialogueMessage());
         }
         else if (collision.gameObject.tag == "Planet")
         {
