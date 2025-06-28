@@ -238,8 +238,6 @@ MonoBehaviour:
   player: {fileID: 1027728862}
   scrollSpeed: 2
   spriteRenderer: {fileID: 517262145}
-  resetPositionY: -20
-  startPositionY: 20
 --- !u!4 &93433656
 Transform:
   m_ObjectHideFlags: 0
@@ -345,7 +343,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &266832120
+--- !u!21 &322024456
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -675,6 +673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 0}
   obstacleCollisionSound: {fileID: 0}
+  encounterBirdSound: {fileID: 0}
+  planetReachedSound: {fileID: 0}
 --- !u!1 &1088794248
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endZone: {fileID: 1546411880}
   player: {fileID: 1027728862}
-  endZoneSpawnTime: 100
+  endZoneSpawnTime: 20
   spawners:
   - {fileID: 1088794248}
   - {fileID: 1678626311}
