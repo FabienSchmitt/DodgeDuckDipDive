@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
         TryGetComponent(out playerInput);
         TryGetComponent(out playerBody);
         TryGetComponent(out playerAnimator);
+        if(playerMotion != PlayerMotion.Vertical)
+            playerAnimator.SetBool("flappingAbove", true);
+
         playerInput.onActionTriggered += context =>
         {
             if (context.action.name == InputActionConstants.Player.InputActionMove)
