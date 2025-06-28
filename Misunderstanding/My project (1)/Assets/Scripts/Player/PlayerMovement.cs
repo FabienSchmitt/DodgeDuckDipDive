@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rigidbody2D;
 
+    [SerializeField] AudioClip flappingSound;
+
     private PlayerInput playerInput;
     private Animator playerAnimator;
     private Rigidbody2D playerBody;
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StopMoving();
         }
+        SoundManager.Instance.PlaySound(flappingSound);
     }
 
     private void ChangeDirection(CallbackContext context)

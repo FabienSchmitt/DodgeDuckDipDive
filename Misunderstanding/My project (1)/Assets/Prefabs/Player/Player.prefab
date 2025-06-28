@@ -281,7 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyingSpeed: 5
   playerMotion: 0
-  rigidbody2D: {fileID: 0}
+  rigidbody2D: {fileID: 755670590642425133}
+  flappingSound: {fileID: 8300000, guid: 05e25ce8ebf3a9545bc668ca535a16a5, type: 3}
 --- !u!114 &1881246626395886577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,8 +296,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 9052135550999889930}
-  uiManager: {fileID: 0}
-  dialogueManager: {fileID: 0}
 --- !u!114 &3946020804286339353
 MonoBehaviour:
   m_ObjectHideFlags: 0
