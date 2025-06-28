@@ -18,6 +18,7 @@ public class LevelTimer : MonoBehaviour
     
     public bool IsTimeUp { get; private set; }
 
+
     private void OnEnable()
     {
         isEnabled = true;
@@ -54,5 +55,10 @@ public class LevelTimer : MonoBehaviour
         }
         timerCountDown = timerDuration.Subtract(TimeSpan.FromMilliseconds(stopWatch.ElapsedMilliseconds));
         timerText.text = $"{timerCountDown.ToString("mm\\:ss")}";
+    }
+
+    public void AddSeconds(int secondsToAdd)
+    {
+        timerDuration = timerDuration.Add(TimeSpan.FromSeconds(secondsToAdd));
     }
 }
