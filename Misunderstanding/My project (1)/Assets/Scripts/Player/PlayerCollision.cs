@@ -27,6 +27,7 @@ public class PlayerCollision : MonoBehaviour
         {
             var encounterBirdTextManager = collision.gameObject.GetComponent<EncounterBirdTextManager>();
             dialogueManager.ShowDialogue(encounterBirdTextManager.GetDialogueMessage());
+            encounterBirdTextManager.enabled = false;
         }
     }
 }

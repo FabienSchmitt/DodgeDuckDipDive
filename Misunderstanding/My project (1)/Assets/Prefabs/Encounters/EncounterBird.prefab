@@ -282,7 +282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfee24aeca9486c4ba694832141da8eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubble: {fileID: 2907376884387241941}
+  textBubble: {fileID: 2907376884387241941}
+  bubble: {fileID: 4359218007843551402}
+  boxCollider2D: {fileID: 3638334301308886785}
 --- !u!1 &4359218007843551402
 GameObject:
   m_ObjectHideFlags: 0

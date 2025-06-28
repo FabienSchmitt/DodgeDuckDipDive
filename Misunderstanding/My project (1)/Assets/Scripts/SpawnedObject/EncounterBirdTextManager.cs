@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class EncounterBirdTextManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI bubble;
+    [SerializeField] TextMeshProUGUI textBubble;
+    [SerializeField] GameObject bubble;
+    [SerializeField] BoxCollider2D boxCollider2D;
 
     private string[] bubbleTextCandidates = new string[]
     {
@@ -26,11 +28,10 @@ public class EncounterBirdTextManager : MonoBehaviour
     };
 
     private string[] conversationCandidate1 = new string[]
-{
+    {
         "Why me, you are a little cute one, aren't you? A shame you should be going that way, instead of joining me to the safe paradise island where I'm heading to.",
         "Why not go with me and change direction? (press Space/A)"
-};
-
+    };
 
     private List<string[]> conversationCandidates = new();
 
@@ -43,12 +44,19 @@ public class EncounterBirdTextManager : MonoBehaviour
     private void Awake()
     {
         var random = new System.Random();
-        bubble.text = bubbleTextCandidates[random.Next(bubbleTextCandidates.Count())];
+        textBubble.text = bubbleTextCandidates[random.Next(bubbleTextCandidates.Count())];
     }
 
     public string[] GetDialogueMessage()
     {
         var random = new System.Random();
         return conversationCandidates[random.Next(conversationCandidates.Count)];
+    }
+
+    private void OnDisable()
+    {
+        // do not show bubble or trigger dialogue once it has been seen
+        bubble.SetActive(false);
+        boxCollider2D.enabled = false;
     }
 }
