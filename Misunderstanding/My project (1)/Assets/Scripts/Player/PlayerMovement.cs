@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
     public void NeedToMove()
     {
         doMove = true;
-        rigidbody2D.gravityScale = 10;
+        rigidbody2D.gravityScale = 20;
     }
 
     private void Update()

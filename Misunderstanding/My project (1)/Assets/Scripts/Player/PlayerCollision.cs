@@ -4,8 +4,8 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] BoxCollider2D boxCollider;
-    [SerializeField] UIManager uiManager;
-    [SerializeField] DialogueManager dialogueManager;
+    UIManager uiManager;
+    DialogueManager dialogueManager;
     private void Awake()
     {
         uiManager = GameObject.FindAnyObjectByType<UIManager>();
@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Obstacle")
         {
-            //uiManager.ShowGameOver(); // TODO: UNCOMMENT
+            uiManager.ShowGameOver();
         }
     }
 

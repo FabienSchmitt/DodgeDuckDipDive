@@ -26,6 +26,11 @@ public class SpawnObjectMovement : MonoBehaviour
         playerMotion = playerMovement.GetPlayerMotion();
     }
 
+    public void Stop()
+    {
+        speed = 0;
+    }
+
     void Update()
     {
         if (playerMotion == PlayerMotion.Vertical)
@@ -54,7 +59,6 @@ public class SpawnObjectMovement : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
-
         }
        
     }
