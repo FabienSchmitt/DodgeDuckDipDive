@@ -10,8 +10,9 @@ public class BackgroundScroller : MonoBehaviour
     private float resetPositionXRight;
     private float startPositionX;
 
-    [SerializeField] float resetPositionY = -20f;
-    [SerializeField] float startPositionY = 20f;
+    private float resetPositionYUp;
+    private float resetPositionYDown;
+    private float startPositionY;
 
     private void Awake()
     {
@@ -20,7 +21,8 @@ public class BackgroundScroller : MonoBehaviour
         resetPositionXRight = transform.position.x - spriteRenderer.bounds.size.x;
 
         startPositionY = transform.position.y;
-        resetPositionY = spriteRenderer.size.y;
+        resetPositionYUp = transform.position.y + spriteRenderer.bounds.size.y;
+        resetPositionYDown = transform.position.y - spriteRenderer.bounds.size.y;
     }
 
     void Update()
@@ -42,8 +44,11 @@ public class BackgroundScroller : MonoBehaviour
         }
         else if(playerMotion == PlayerMotion.Horizontal)
         {
-            transform.position += Vector3.down * scrollSpeed * Time.deltaTime;
-            if (transform.position.y <= resetPositionY)
+            var goingUp = player.gameObject.transform.localScale.y > 0;
+            var direction = goingUp ? Vector3.down : Vector3.up;
+            transform.position += direction * scrollSpeed * Time.deltaTime;
+
+            if (transform.position.y <= resetPositionYDown || transform.position.y >= resetPositionYUp)
             {
                 Vector3 newPos = transform.position;
                 newPos.y = startPositionY;
