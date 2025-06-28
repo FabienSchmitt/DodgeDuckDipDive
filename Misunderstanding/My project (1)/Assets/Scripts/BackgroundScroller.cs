@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour
 {
-    public float scrollSpeed = 2f;
-    public float resetPositionX = -20f;
-    public float startPositionX = 20f;
+    [SerializeField] GameObject player; 
+    [SerializeField] float scrollSpeed = 0.1f;
+    [SerializeField] float resetPositionX = -20f;
+    [SerializeField] float startPositionX = 20f;
 
     void Update()
     {
