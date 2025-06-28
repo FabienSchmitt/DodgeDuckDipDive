@@ -47,7 +47,6 @@ public class MovingObjectSpawner : MonoBehaviour
         }
         bool flip = flipSpawn && Random.value > 0.5;
 
-        Debug.Log(flip);
         var spawnedObject = Instantiate(objectPrefab, pos, Quaternion.identity);
         
         var spawnObjectBehavior = spawnedObject.GetComponent<SpawnObjectMovement>();
