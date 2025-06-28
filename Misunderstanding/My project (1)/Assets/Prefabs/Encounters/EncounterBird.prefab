@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 2616478787664290003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0265, y: 0.0638, z: 0}
+  m_LocalScale: {x: 1.053, y: 1.1276742, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9098892384314980952}
@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 5950691815328442738}
   - component: {fileID: 7251804830853129658}
   - component: {fileID: 3638334301308886785}
+  - component: {fileID: 7485233501360194788}
   m_Layer: 0
   m_Name: EncounterBird
   m_TagString: Untagged
@@ -269,6 +270,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7485233501360194788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168482279550479205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfee24aeca9486c4ba694832141da8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubble: {fileID: 2907376884387241941}
 --- !u!1 &4359218007843551402
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 4359218007843551402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 1.24, z: 0}
+  m_LocalPosition: {x: 1.45, y: 1.673, z: 0}
   m_LocalScale: {x: 3.2, y: 1.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -368,7 +382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Coucou
+  m_text: Don't go there
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6ed0188b7f300045a1497490b5e2150, type: 2}
   m_sharedMaterial: {fileID: -265585977522133677, guid: f6ed0188b7f300045a1497490b5e2150, type: 2}
@@ -527,7 +541,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: -0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5950691815328442738}
@@ -576,12 +590,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8485588920282805871, guid: a44515f4d0b999240a503cd58ed393cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7eb31616d88968a48a153036223964a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.2, y: 5.62}
+  m_Size: {x: 5.36, y: 4.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
