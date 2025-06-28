@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - EncounterBird
+  - Planet
   - Floor
   layers:
   - Default

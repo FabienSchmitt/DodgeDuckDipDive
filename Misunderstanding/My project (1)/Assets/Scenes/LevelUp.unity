@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1881246626395886577, guid: 3a831a0dacbf6f44aa66c3a79572995b, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 981629877}
+    - target: {fileID: 1881246626395886577, guid: 3a831a0dacbf6f44aa66c3a79572995b, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 2140628239}
     - target: {fileID: 3827430167093231552, guid: 3a831a0dacbf6f44aa66c3a79572995b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -406,6 +414,58 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 10.793627}
   m_EdgeRadius: 0
+--- !u!21 &765101151
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 1850, g: 250, b: 80, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &810977020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2494290206284400018, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
+  m_PrefabInstance: {fileID: 1064676354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &811350125
 Material:
   serializedVersion: 8
@@ -536,10 +596,11 @@ GameObject:
   - component: {fileID: 907557265}
   - component: {fileID: 907557264}
   - component: {fileID: 907557267}
-  - component: {fileID: 907557266}
+  - component: {fileID: 907557268}
+  - component: {fileID: 907557269}
   m_Layer: 0
   m_Name: EndZone
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,13 +669,41 @@ Transform:
   m_GameObject: {fileID: 907557263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 6.47, z: 0}
+  m_LocalPosition: {x: -0.02, y: 7.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &907557266
+--- !u!114 &907557267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907557263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf62c769d0b889e4eab9fefef447cd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  boxCollider: {fileID: 907557269}
+  spriteRenderer: {fileID: 907557264}
+  canBeDestroyed: 1
+--- !u!114 &907557268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907557263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849886c6fa74fa247bf4fae1de8c942e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &907557269
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,7 +733,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -658,24 +747,19 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &907557267
+--- !u!114 &981629877 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4928846427134862185, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
+  m_PrefabInstance: {fileID: 1064676354}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907557263}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf62c769d0b889e4eab9fefef447cd02, type: 3}
+  m_Script: {fileID: 11500000, guid: 55707ab9dfe6de64ea51716862cc0a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  boxCollider: {fileID: 907557266}
-  spriteRenderer: {fileID: 0}
-  canBeDestroyed: 1
 --- !u!1001 &1064676354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -817,47 +901,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be2a108086f28c45ae8557c0b1ed43f, type: 3}
---- !u!21 &1461556695
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
-    - _WidthHeightRadius: {r: 1850, g: 250, b: 80, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1527179396
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527179397}
   - component: {fileID: 1527179398}
+  - component: {fileID: 1527179399}
   m_Layer: 0
   m_Name: LevelUp
   m_TagString: Untagged
@@ -907,6 +951,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1172478062}
   timerSeconds: 120
+--- !u!114 &1527179399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527179396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631025a3096ffee4ba03cc2e47c1da04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryMessage: {fileID: 810977020}
 --- !u!1 &1869567406
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,8 +1010,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endZone: {fileID: 907557263}
   player: {fileID: 382824775}
-  endZoneSpawnTime: 20
+  endZoneSpawnTime: 1
   spawners: []
+--- !u!114 &2140628239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2228837209196339094, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
+  m_PrefabInstance: {fileID: 1064676354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0394025770d8194c9e57334862e5040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2143462146
 GameObject:
   m_ObjectHideFlags: 0
