@@ -56,6 +56,7 @@ public class EndZoneSpawner : MonoBehaviour
         }
         else if (playerMovement.playerMotion == PlayerMotion.Horizontal)
         {
+            // manage only end zone going DOWN at the moment
             pos = new Vector3(0.5f, 1.5f, 10);
             pos = Camera.main.ViewportToWorldPoint(pos);
         }
