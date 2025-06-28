@@ -283,6 +283,7 @@ MonoBehaviour:
   playerMotion: 0
   rigidbody2D: {fileID: 755670590642425133}
   flappingSound: {fileID: 8300000, guid: 05e25ce8ebf3a9545bc668ca535a16a5, type: 3}
+  movingSound: {fileID: 8300000, guid: 47e1a04e3b48f424b853ad0ec5354ad0, type: 3}
 --- !u!114 &1881246626395886577
 MonoBehaviour:
   m_ObjectHideFlags: 0

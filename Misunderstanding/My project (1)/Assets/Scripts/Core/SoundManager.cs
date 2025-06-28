@@ -5,6 +5,12 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
+    [SerializeField]
+    private float maxMusicVolume = 0.3f;
+
+    [SerializeField]
+    private float maxSoundEffectsVolume = 1f;
+
     private AudioSource soundEffectSource;
     private AudioSource musicSource;
 
@@ -46,12 +52,12 @@ public class SoundManager : MonoBehaviour
 
     public void ChangeMusicVolume(float volumeChange)
     {
-        ChangeAudioSourceVolume(musicSource, PlayerPrefsConstants.MusicVolume, 0.3f, volumeChange);
+        ChangeAudioSourceVolume(musicSource, PlayerPrefsConstants.MusicVolume, maxMusicVolume, volumeChange);
     }
 
     private void ChangeAudioSourceVolume(AudioSource audioSource, string persistedFieldName, float normalizedVolume, float volumeChange)
     {
-        float currentVolume = PlayerPrefs.GetFloat(persistedFieldName, 1);
+        float currentVolume = PlayerPrefs.GetFloat(persistedFieldName, maxSoundEffectsVolume);
         currentVolume += volumeChange;
 
         // check volume is in range of min/max

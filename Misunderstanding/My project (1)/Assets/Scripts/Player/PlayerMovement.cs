@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidbody2D;
 
     [SerializeField] AudioClip flappingSound;
+    [SerializeField] AudioClip movingSound;
 
     private PlayerInput playerInput;
     private Animator playerAnimator;
@@ -77,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StopMoving();
         }
-        SoundManager.Instance.PlaySound(flappingSound);
+        SoundManager.Instance.PlaySound(movingSound);
     }
 
     private void ChangeDirection(CallbackContext context)
@@ -103,30 +104,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // Calling run here allows continuous horizontal movement when holding the motion input
-        UpdateRunningBehaviour();
+        // Calling run here allows continuous movement when holding the motion input
+        UpdateFlyingBehaviour();
     }
 
-    private void UpdateRunningBehaviour()
+    private void UpdateFlyingBehaviour()
     {
         // Actual movement
-        playerBody.linearVelocity = new Vector2(motionDirection.x * flyingSpeed, motionDirection.y * flyingSpeed);
-
-        // Visual animations
-        //if (motionDirection.x != 0)
-        //{
-        //    // flip sprite left-right
-        //    if (motionDirection.x > 0)
-        //        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        //    else
-        //        transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        //}
-        //else if (motionDirection.y > 0)
-        //{
-        //}
-        //else if (motionDirection.y < 0)
-        //{
-        //}
+        playerBody.linearVelocity = new Vector2(motionDirection.x * flyingSpeed, motionDirection.y * flyingSpeed);            
+        
+        // Sound effect: avoid playing multiple times the running sound when other sound are playing
+        if (!SoundManager.Instance.IsAudioSourcePlaying())
+            SoundManager.Instance.PlaySound(flappingSound);
     }
 
     public PlayerMotion GetPlayerMotion()
