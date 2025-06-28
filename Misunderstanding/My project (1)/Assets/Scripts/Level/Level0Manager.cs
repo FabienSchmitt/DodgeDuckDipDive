@@ -1,6 +1,4 @@
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using static UnityEngine.InputSystem.Controls.AxisControl;
 
 public class Level0Manager : MonoBehaviour
 {
