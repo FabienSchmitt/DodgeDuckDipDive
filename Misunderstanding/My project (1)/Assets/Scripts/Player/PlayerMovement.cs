@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
@@ -17,10 +18,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private PlayerMotion playerMotion;
 
+    [SerializeField]
+    private Rigidbody2D rigidbody2D;
+
     private PlayerInput playerInput;
     private Animator playerAnimator;
     private Rigidbody2D playerBody;
     private Vector2 motionDirection;
+    private bool doMove = false;
     
     // Set to false when the zone appears. 
     public bool CanChangeDirection { get; set; } = true;
@@ -55,7 +60,11 @@ public class PlayerMovement : MonoBehaviour
         if (playerMotion == PlayerMotion.Horizontal && playerInput.x != 0)
         {
             motionDirection.x = playerInput.x;
-            motionDirection.y = 0;
+            // In the end, the bird will move and encounter the floor as it becomes visible.
+            if (!doMove)
+            {
+                motionDirection.y = 0;
+            }
         }
         else if (playerMotion == PlayerMotion.Vertical && playerInput.y != 0)
         {
@@ -82,6 +91,13 @@ public class PlayerMovement : MonoBehaviour
     {
         motionDirection = Vector2.zero;
     }
+
+    public void NeedToMove()
+    {
+        doMove = true;
+        rigidbody2D.gravityScale = 10;
+    }
+
     private void Update()
     {
         // Calling run here allows continuous horizontal movement when holding the motion input
@@ -108,5 +124,10 @@ public class PlayerMovement : MonoBehaviour
         //else if (motionDirection.y < 0)
         //{
         //}
+    }
+
+    public PlayerMotion GetPlayerMotion()
+    {
+        return playerMotion;
     }
 }

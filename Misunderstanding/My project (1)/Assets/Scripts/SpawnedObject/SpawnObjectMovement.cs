@@ -5,8 +5,12 @@ public class SpawnObjectMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] BoxCollider2D boxCollider;
     [SerializeField] SpriteRenderer spriteRenderer;
-    
+    [SerializeField] bool canBeDestroyed = true;
+        
     GameObject player;
+    PlayerMovement playerMovement;
+    PlayerMotion playerMotion;
+
 
     public void Initialize(GameObject _player)
     {
@@ -17,19 +21,41 @@ public class SpawnObjectMovement : MonoBehaviour
             if (Mathf.Sign(spriteRenderer.transform.localScale.x) == Mathf.Sign(player.transform.localScale.x))
                 spriteRenderer.transform.localScale = new Vector2(-spriteRenderer.transform.localScale.x, spriteRenderer.transform.localScale.y);
         }
+
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerMotion = playerMovement.GetPlayerMotion();
     }
 
     void Update()
     {
-        var playerGoingRight = player.transform.localScale.x > 0;
-
-        var direction = playerGoingRight ? Vector3.left : Vector3.right; // spawn object go the opposite way.
-        transform.position += direction * speed * Time.deltaTime;
-
-        var relativePosition = Camera.main.WorldToViewportPoint(transform.position);
-        if (relativePosition.x > 3f || relativePosition.x < -2f)
+        if (playerMotion == PlayerMotion.Vertical)
         {
-            Destroy(this.gameObject);
+            var playerGoingRight = player.transform.localScale.x > 0;
+
+            var direction = playerGoingRight ? Vector3.left : Vector3.right; // spawn object go the opposite way.
+            transform.position += direction * speed * Time.deltaTime;
+
+            var relativePosition = Camera.main.WorldToViewportPoint(transform.position);
+            if (relativePosition.x > 3f || relativePosition.x < -2f)
+            {
+                Destroy(this.gameObject);
+            }
         }
+
+        else if (playerMotion == PlayerMotion.Horizontal)
+        {
+            var playerGoingUp = player.transform.localScale.y > 0;
+
+            var direction = playerGoingUp ? Vector3.down : Vector3.up; // spawn object go the opposite way.
+            transform.position += direction * speed * Time.deltaTime;
+
+            var relativePosition = Camera.main.WorldToViewportPoint(transform.position);
+            if (relativePosition.y > 3f || relativePosition.y < -2f && canBeDestroyed)
+            {
+                Destroy(this.gameObject);
+            }
+
+        }
+       
     }
 }
