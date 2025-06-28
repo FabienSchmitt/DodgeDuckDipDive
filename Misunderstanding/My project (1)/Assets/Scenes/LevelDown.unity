@@ -2344,6 +2344,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4928846427134862185, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
+      propertyPath: firstLevelBuildIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6938748452834328073, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
       propertyPath: m_Name
       value: VisualCore
