@@ -368,7 +368,7 @@ PrefabInstance:
     - target: {fileID: 9109747487664050871, guid: a9c3279283b8f6d4ca6862d15b8b0252, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 318298883}
+      objectReference: {fileID: 334415967}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -623,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1278526777
 Transform:
   m_ObjectHideFlags: 0
@@ -871,6 +871,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1719576787556176082, guid: 8be2a108086f28c45ae8557c0b1ed43f, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 3edd1b9cfcb2ad04fb728d70aa0fb673, type: 3}
+    - target: {fileID: 1719576787556176082, guid: 8be2a108086f28c45ae8557c0b1ed43f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3edd1b9cfcb2ad04fb728d70aa0fb673, type: 3}
     - target: {fileID: 9097012310912898706, guid: 8be2a108086f28c45ae8557c0b1ed43f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
