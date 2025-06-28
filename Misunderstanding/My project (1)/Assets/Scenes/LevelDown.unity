@@ -3089,7 +3089,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1990010761
+--- !u!21 &2040929816
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
