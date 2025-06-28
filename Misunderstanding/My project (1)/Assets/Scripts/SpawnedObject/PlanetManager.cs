@@ -6,7 +6,7 @@ public class PlanetManager : MonoBehaviour
     {
         return new string[]
         {
-            "You have reached the planet, congratulations!"
+            "What a treat, this human-free planet looks just fine to me, let us all have a joyful Bird Mitzvah to celebrate!"
         };
     }
 
