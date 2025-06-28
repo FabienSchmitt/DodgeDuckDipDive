@@ -37,7 +37,7 @@ public class MovingObjectSpawner : MonoBehaviour
             pos = new Vector3(Random.value + offset, Random.value, 10);
             pos = Camera.main.ViewportToWorldPoint(pos);
         }
-        else if(playerMovement.playerMotion == PlayerMotion.Horizontal)
+        else if (playerMovement.playerMotion == PlayerMotion.Horizontal)
         {
            
             var playerGoingUp = player.transform.localScale.y > 0;
@@ -48,16 +48,14 @@ public class MovingObjectSpawner : MonoBehaviour
         bool flip = flipSpawn && Random.value > 0.5;
 
         Debug.Log(flip);
-
-        if (flip)
-        {
-            var current = objectPrefab.transform.localScale;
-            objectPrefab.transform.localScale = new Vector3(-current.x, current.y, current.z);
-        }
         var spawnedObject = Instantiate(objectPrefab, pos, Quaternion.identity);
         
         var spawnObjectBehavior = spawnedObject.GetComponent<SpawnObjectMovement>();
         spawnObjectBehavior.Initialize(player);
-
+        if (flip)
+        {
+            var current = spawnedObject.transform.localScale;
+            spawnedObject.transform.localScale = new Vector3(-current.x, current.y, current.z);
+        }
     }
 }
