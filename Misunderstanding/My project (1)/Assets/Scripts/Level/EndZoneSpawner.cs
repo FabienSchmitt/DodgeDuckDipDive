@@ -6,6 +6,7 @@ public class EndZoneSpawner : MonoBehaviour
     [SerializeField] GameObject endZone;
     [SerializeField] GameObject player;
     [SerializeField] float endZoneSpawnTime = 10f;
+    [SerializeField] GameObject[] spawners;
 
     private float elapsedTime = 0;
     private bool canSpawn = true;
@@ -37,7 +38,10 @@ public class EndZoneSpawner : MonoBehaviour
     void SpawnEndZone()
     {
         // We don't want to spawn clouds or birds anymore
-
+        foreach (var spawner in spawners)
+        {
+            spawner.SetActive(false);
+        }
 
         // player cannot change direction anymore
         playerMovement.CanChangeDirection = false;
