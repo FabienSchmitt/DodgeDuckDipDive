@@ -5,11 +5,11 @@ public class LevelDownManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject[] spawners;
     [SerializeField] float maxDistance;
-    [SerializeField] UIManager uiManager;
     [SerializeField] GameObject floor;
 
     private float currentHeight;
     private float minHeight;
+    private UIManager uiManager;
 
     private void Awake()
     {
