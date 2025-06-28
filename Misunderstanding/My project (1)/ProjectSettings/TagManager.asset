@@ -9,6 +9,7 @@ TagManager:
   - Planet
   - Floor
   - SpaceGear
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 public class SpawnObjectMovement : MonoBehaviour
@@ -72,5 +73,14 @@ public class SpawnObjectMovement : MonoBehaviour
             }
         }
        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall" && secondarySpeed > 0)
+        {
+            // when they hit a wall, they go the oppsosite direction
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
     }
 }
