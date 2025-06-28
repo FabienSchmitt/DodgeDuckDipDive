@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level0.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/LevelDown.unity
+    guid: 7057b2f2e8eba0b4790123d6fb03bfab
+  - enabled: 1
+    path: Assets/Scenes/LevelUp.unity
+    guid: 18e1f62803ff69745820ef73c48e3082
+  - enabled: 1
+    path: Assets/Scenes/FabienTestScene.unity
+    guid: 21ac57249c2fe214ea7e1ca191ac8b39
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0ad3ab585eaa2794187d3ad07023d6bd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
