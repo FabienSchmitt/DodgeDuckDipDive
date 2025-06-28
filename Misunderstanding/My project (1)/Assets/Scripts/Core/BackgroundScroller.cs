@@ -15,13 +15,17 @@ public class BackgroundScroller : MonoBehaviour
         PlayerMotion playerMotion = player.GetComponent<PlayerMovement>().playerMotion;
         if(playerMotion == PlayerMotion.Vertical)
         {
-            transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
+            var goingRight = player.gameObject.transform.localScale.x > 0;
+
+            var direction = goingRight ? Vector3.left : Vector3.right;
+            transform.position += direction * scrollSpeed * Time.deltaTime;
             if (transform.position.x <= resetPositionX)
             {
                 Vector3 newPos = transform.position;
                 newPos.x = startPositionX;
                 transform.position = newPos;
             }
+
         }
         else if(playerMotion == PlayerMotion.Horizontal)
         {
