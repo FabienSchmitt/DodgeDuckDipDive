@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - EncounterBird
   - Planet
+  - Floor
   layers:
   - Default
   - TransparentFX

@@ -17,21 +17,13 @@ public class LevelDownManager : MonoBehaviour
         minHeight = currentHeight - maxDistance;
 
         uiManager = GameObject.FindAnyObjectByType<UIManager>();
+        var movement = floor.GetComponent<SpawnObjectMovement>();
+        movement.Initialize(player);
+        floor.transform.position = new Vector2(floor.transform.position.x, minHeight);
+        floor.gameObject.SetActive(true);
     }
 
     void Update()
     {
-        currentHeight -= Time.deltaTime;
-        if (currentHeight < minHeight)
-        {
-            uiManager.ShowGameEnd(true);
-        }
-
-        if (true /*floor is visible*/)
-        {
-            var playerMovement = player.gameObject.GetComponent<PlayerMovement>();
-            playerMovement.NeedToMove();
-        }
-        
     }
 }
