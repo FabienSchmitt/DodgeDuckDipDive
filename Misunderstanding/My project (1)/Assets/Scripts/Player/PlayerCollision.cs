@@ -29,5 +29,11 @@ public class PlayerCollision : MonoBehaviour
             dialogueManager.ShowDialogue(encounterBirdTextManager.GetDialogueMessage());
             encounterBirdTextManager.enabled = false;
         }
+        else if (collision.gameObject.tag == "Planet")
+        {
+            var planetManager = collision.gameObject.GetComponent<PlanetManager>();
+            dialogueManager.ShowDialogue(planetManager.GetPlanetIsReachedMessage());
+            planetManager.SetPlanetReached();
+        }
     }
 }
