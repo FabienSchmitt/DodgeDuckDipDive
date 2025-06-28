@@ -297,6 +297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 9052135550999889930}
+  obstacleCollisionSound: {fileID: 8300000, guid: 45389a5b6bfb771499b25217a49d995f, type: 3}
+  encounterBirdSound: {fileID: 8300000, guid: b0c4ec37f322b1b4098ccd16fc233719, type: 3}
+  planetReachedSound: {fileID: 8300000, guid: 061c828595e6ae2489b3d83f054df7bc, type: 3}
 --- !u!114 &3946020804286339353
 MonoBehaviour:
   m_ObjectHideFlags: 0
