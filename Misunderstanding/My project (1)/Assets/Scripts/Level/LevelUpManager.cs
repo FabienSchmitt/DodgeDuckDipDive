@@ -7,14 +7,27 @@ public class LevelUpManager : MonoBehaviour
     private LevelTimer levelTimer;
 
     [SerializeField] TextMeshProUGUI victoryMessage;
+    [SerializeField] DialogueManager dialogueManager;
+    private string[] GetLevelStartDialogue() => new string[]
+    {
+        "YES, I feel this is the right way, up into space following the stars, till I reach a decent planet with no dumb humans to disturb me!",
+        "Though I feel a slight urge to find oxygen since I got here... But no worries, there are enough abandoned space gears lying around here that I can reuse to get where I want.",
+        "I hope the ride is not too long to this never dreamed-of planet!"
+    };
+
+    private string GetLevelEndingMessage() => $"Congratulations, you have reached a human-free planet and can now safely rest for the remaining of your bird life.";
 
     void Awake()
     {
         uiManager = FindFirstObjectByType<UIManager>();
         levelTimer = FindFirstObjectByType<LevelTimer>();
+        dialogueManager = FindFirstObjectByType<DialogueManager>(FindObjectsInactive.Include);
     }
 
-    private string GetLevelEndingMessage() => $"Congratulations, you have reached a human-free planet and can now safely rest for the remaining of your bird life.";
+    private void Start()
+    {
+        dialogueManager.ShowDialogue(GetLevelStartDialogue());
+    }
 
     public bool IsPlanetReached { get; set; }
 
