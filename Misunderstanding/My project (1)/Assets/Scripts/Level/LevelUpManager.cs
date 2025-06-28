@@ -7,7 +7,7 @@ public class LevelUpManager : MonoBehaviour
     private LevelTimer levelTimer;
 
     [SerializeField] TextMeshProUGUI victoryMessage;
-    [SerializeField] DialogueManager dialogueManager;
+    DialogueManager dialogueManager;
     private string[] GetLevelStartDialogue() => new string[]
     {
         "YES, I feel this is the right way, up into space following the stars, till I reach a decent planet with no dumb humans to disturb me!",
