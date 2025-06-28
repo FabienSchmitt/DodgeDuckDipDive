@@ -3,9 +3,9 @@
 public class MovingObjectSpawner : MonoBehaviour
 {
     [SerializeField] GameObject objectPrefab;
-    [SerializeField] bool playerGoingRight;
     [SerializeField] float spawnTime;
     [SerializeField] GameObject player;
+    [SerializeField] bool flipSpawn = false;
     PlayerMovement playerMovement;
 
     private float elapsedTime = 0f;
@@ -39,12 +39,23 @@ public class MovingObjectSpawner : MonoBehaviour
         }
         else if(playerMovement.playerMotion == PlayerMotion.Horizontal)
         {
+           
             var playerGoingUp = player.transform.localScale.y > 0;
             float offset = playerGoingUp ? 1.1f : -1.1f;
             pos = new Vector3(Random.value, Random.value + offset, 10);
             pos = Camera.main.ViewportToWorldPoint(pos);
         }
+        bool flip = flipSpawn && Random.value > 0.5;
+
+        Debug.Log(flip);
+
+        if (flip)
+        {
+            var current = objectPrefab.transform.localScale;
+            objectPrefab.transform.localScale = new Vector3(-current.x, current.y, current.z);
+        }
         var spawnedObject = Instantiate(objectPrefab, pos, Quaternion.identity);
+        
         var spawnObjectBehavior = spawnedObject.GetComponent<SpawnObjectMovement>();
         spawnObjectBehavior.Initialize(player);
 

@@ -6,6 +6,7 @@ public class SpawnObjectMovement : MonoBehaviour
     [SerializeField] BoxCollider2D boxCollider;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] bool canBeDestroyed = true;
+    [SerializeField] float secondarySpeed;
         
     GameObject player;
     PlayerMovement playerMovement;
@@ -52,7 +53,17 @@ public class SpawnObjectMovement : MonoBehaviour
             var playerGoingUp = player.transform.localScale.y > 0;
 
             var direction = playerGoingUp ? Vector3.down : Vector3.up; // spawn object go the opposite way.
-            transform.position += direction * speed * Time.deltaTime;
+            if (secondarySpeed > 0)
+            {
+                direction *= speed;
+                bool isGoingLeft = transform.localScale.x > 0;
+                direction += (isGoingLeft ? Vector3.left : Vector3.right) * secondarySpeed;
+                transform.position += direction * Time.deltaTime;
+            }
+            else
+            {
+                transform.position += direction * speed * Time.deltaTime;
+            }
 
             var relativePosition = Camera.main.WorldToViewportPoint(transform.position);
             if (relativePosition.y > 3f || relativePosition.y < -2f && canBeDestroyed)
