@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 755670590642425133}
   - component: {fileID: 9052135550999889930}
   - component: {fileID: 7606169849091869342}
+  - component: {fileID: 1881246626395886577}
   - component: {fileID: 3098474344949926741}
   m_Layer: 0
   m_Name: Player
@@ -257,6 +258,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyingSpeed: 5
   playerMotion: 0
+  rigidbody2D: {fileID: 0}
+--- !u!114 &1881246626395886577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595453673938776456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172f3d948bb9f64e8967ea4a4b3ab68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxCollider: {fileID: 9052135550999889930}
+  uiManager: {fileID: 0}
+  dialogueManager: {fileID: 0}
 --- !u!95 &3098474344949926741
 Animator:
   serializedVersion: 7
