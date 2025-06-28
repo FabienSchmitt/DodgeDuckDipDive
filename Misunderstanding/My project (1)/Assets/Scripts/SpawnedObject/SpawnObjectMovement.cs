@@ -20,7 +20,6 @@ public class SpawnObjectMovement : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
 
         var relativePosition = Camera.main.WorldToViewportPoint(transform.position);
-        Debug.Log($"relative position : {relativePosition.x} transform : {transform.position.x}");
         if (relativePosition.x > 3f || relativePosition.x < -2f)
         {
             Destroy(this.gameObject);

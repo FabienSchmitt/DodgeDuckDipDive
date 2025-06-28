@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -20,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
     private Rigidbody2D playerBody;
     private Vector2 motionDirection;
+    
+    // Set to false when the zone appears. 
+    public bool CanChangeDirection { get; set; } = true;
+    public event EventHandler ChangeDirectionHandler;
+
     private void Awake()
     {
         TryGetComponent(out playerInput);
@@ -61,8 +67,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeDirection(CallbackContext context)
     {
+        if (!CanChangeDirection) return; // TODO : inform user
+        
         transform.localScale = new Vector2(-this.transform.localScale.x, transform.localScale.y); 
         motionDirection = new Vector2(-motionDirection.x, motionDirection.y);
+        ChangeDirectionHandler.Invoke(this, new EventArgs());
     }
 
     private void StopMoving()
