@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Obstacle")
         {
-            uiManager.ShowGameOver();
+            //uiManager.ShowGameOver(); // TODO: UNCOMMENT
         }
     }
 

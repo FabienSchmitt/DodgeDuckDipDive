@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float flyingSpeed;   
    
     [SerializeField]
-    private PlayerMotion playerMotion;
+    public PlayerMotion playerMotion;
 
     [SerializeField]
     private Rigidbody2D rigidbody2D;
