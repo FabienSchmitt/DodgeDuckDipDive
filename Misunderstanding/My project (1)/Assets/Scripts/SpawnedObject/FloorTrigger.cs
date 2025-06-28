@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
 public class FloorTrigger : MonoBehaviour
 {
     [SerializeField] GameObject player;
     private UIManager uiManager;
+    private bool isMole = false;
 
 
     private void Awake()
@@ -24,7 +26,14 @@ public class FloorTrigger : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            uiManager.ShowGameEnd(true);
+            if (!isMole)
+            {
+                var playerAnimator = player.GetComponent<Animator>();
+                var newScale = player.transform.localScale;
+                newScale.y = Math.Abs(newScale.y);
+                playerAnimator.SetBool("becomeMole", true);
+                player.transform.localScale = newScale;
+            }
         }
     }
 }
