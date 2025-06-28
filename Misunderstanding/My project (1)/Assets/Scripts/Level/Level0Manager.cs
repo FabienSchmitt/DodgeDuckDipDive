@@ -3,7 +3,7 @@ using UnityEngine;
 public class Level0Manager : MonoBehaviour
 {
 
-    [SerializeField] DialogueManager dialogueManager;
+    DialogueManager dialogueManager;
     private string[] GetLevelStartDialogue() => new string[]
     {
         "Poor me, migrating bird with no sense of where to go, with those crazy humans burning everything with their oversized egos and twisted minds.",
@@ -20,10 +20,5 @@ public class Level0Manager : MonoBehaviour
     private void Start()
     {
         dialogueManager.ShowDialogue(GetLevelStartDialogue());
-    }
-
-    private void Update()
-    {
-        // define level0 logic here
     }
 }

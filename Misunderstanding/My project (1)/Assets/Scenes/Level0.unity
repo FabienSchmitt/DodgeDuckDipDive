@@ -585,7 +585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088794248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 354bdb4b3a61f964e9024c670e913455, type: 3}
   m_Name: 
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endZone: {fileID: 1546411880}
   player: {fileID: 1027728862}
-  endZoneSpawnTime: 5
+  endZoneSpawnTime: 20
   spawners:
   - {fileID: 1088794248}
   - {fileID: 1678626311}
