@@ -12,8 +12,11 @@ public class SpawnObjectMovement : MonoBehaviour
     {
         player = _player;
         // flip sprite to go the opposite way of the player
-        if (Mathf.Sign(spriteRenderer.transform.localScale.x) == Mathf.Sign(player.transform.localScale.x))
-            spriteRenderer.transform.localScale = new Vector2(-spriteRenderer.transform.localScale.x, spriteRenderer.transform.localScale.y);
+        if (spriteRenderer != null)
+        {
+            if (Mathf.Sign(spriteRenderer.transform.localScale.x) == Mathf.Sign(player.transform.localScale.x))
+                spriteRenderer.transform.localScale = new Vector2(-spriteRenderer.transform.localScale.x, spriteRenderer.transform.localScale.y);
+        }
     }
 
     void Update()
