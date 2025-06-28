@@ -71,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
         
         transform.localScale = new Vector2(-this.transform.localScale.x, transform.localScale.y); 
         motionDirection = new Vector2(-motionDirection.x, motionDirection.y);
-        ChangeDirectionHandler.Invoke(this, new EventArgs());
+        if(ChangeDirectionHandler != null)
+            ChangeDirectionHandler.Invoke(this, new EventArgs());
     }
 
     private void StopMoving()

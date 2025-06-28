@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   boxCollider: {fileID: 3638334301308886785}
+  spriteRenderer: {fileID: 5895487812925454690}
 --- !u!61 &3638334301308886785
 BoxCollider2D:
   m_ObjectHideFlags: 0

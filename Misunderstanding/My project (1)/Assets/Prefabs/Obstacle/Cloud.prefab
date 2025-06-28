@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   boxCollider: {fileID: 2608245490061654050}
+  spriteRenderer: {fileID: 4639633629568664130}
