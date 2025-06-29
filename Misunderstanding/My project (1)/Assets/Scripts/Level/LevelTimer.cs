@@ -54,11 +54,19 @@ public class LevelTimer : MonoBehaviour
             return;
         }
         timerCountDown = timerDuration.Subtract(TimeSpan.FromMilliseconds(stopWatch.ElapsedMilliseconds));
-        timerText.text = $"{timerCountDown.ToString("mm\\:ss")}";
+        if(timerCountDown.TotalSeconds < 0)
+            timerText.text = "00:00";
+        else
+            timerText.text = $"{timerCountDown.ToString("mm\\:ss")}";
     }
 
     public void AddSeconds(int secondsToAdd)
     {
         timerDuration = timerDuration.Add(TimeSpan.FromSeconds(secondsToAdd));
+    }
+
+    public void RemoveSeconds(int secondsToRemove)
+    {
+        timerDuration = timerDuration.Add(-TimeSpan.FromSeconds(secondsToRemove));
     }
 }
