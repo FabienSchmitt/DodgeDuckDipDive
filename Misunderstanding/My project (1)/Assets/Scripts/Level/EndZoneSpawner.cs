@@ -50,8 +50,8 @@ public class EndZoneSpawner : MonoBehaviour
         if (playerMovement.playerMotion == PlayerMotion.Vertical)
         {
             var playerGoingRight = player.transform.localScale.x > 0;
-            float offset = playerGoingRight ? 1.1f : -1.1f;
-            pos = new Vector3(UnityEngine.Random.value + offset, 0.5f, 10); // should spawn in the middle of the screen
+            float offset = playerGoingRight ? 1.5f : -0.5f;
+            pos = new Vector3(offset, 0.5f, 10); // should spawn in the middle of the screen
             pos = Camera.main.ViewportToWorldPoint(pos);
         }
         else if (playerMovement.playerMotion == PlayerMotion.Horizontal)

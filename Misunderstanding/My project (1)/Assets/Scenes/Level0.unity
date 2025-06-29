@@ -613,7 +613,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1005283043
+--- !u!21 &854567968
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endZone: {fileID: 1546411880}
   player: {fileID: 1027728862}
-  endZoneSpawnTime: 20
+  endZoneSpawnTime: 100
   spawners:
   - {fileID: 1088794248}
   - {fileID: 1678626311}
