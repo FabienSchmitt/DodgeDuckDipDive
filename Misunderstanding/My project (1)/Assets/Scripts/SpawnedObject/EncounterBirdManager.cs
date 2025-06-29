@@ -56,7 +56,7 @@ public class EncounterBirdManager : MonoBehaviour
         return new string[]
         {
             GetConversationCandidate(choice),
-             "Why not go with me and change direction? (press Space/A)"
+             "Why not go with me and change direction? (press Space | X)"
         };
     }
 
