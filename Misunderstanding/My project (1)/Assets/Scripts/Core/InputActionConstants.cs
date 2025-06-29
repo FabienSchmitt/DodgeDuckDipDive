@@ -5,6 +5,7 @@
         public const string InputActionMove = "Move";
         public const string InputActionJump = "Jump";
         public const string InputActionAttack = "Attack";
+        public const string InputActionBoost = "Interact";
     }
     internal class UI
     {

@@ -13,8 +13,8 @@ public enum PlayerMotion
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float flyingSpeed;   
-   
+    private float flyingSpeed;
+
     [SerializeField]
     public PlayerMotion playerMotion;
 
@@ -27,11 +27,18 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private Animator playerAnimator;
     private Rigidbody2D playerBody;
+    private UIManager uiManager;
     private Vector2 motionDirection;
     private bool doMove = false;
-    
+    private float boostTimer = 0f;
+    private float maxBoostTime = 3f;
+
+
     // Set to false when the zone appears. 
     public bool CanChangeDirection { get; set; } = true;
+    public bool IsBoostActive { get; set; }
+
+
     public event EventHandler ChangeDirectionHandler;
 
     private void Awake()
@@ -39,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
         TryGetComponent(out playerInput);
         TryGetComponent(out playerBody);
         TryGetComponent(out playerAnimator);
-        if(playerMotion != PlayerMotion.Vertical)
+        uiManager = FindFirstObjectByType<UIManager>();
+        if (playerMotion != PlayerMotion.Vertical)
             playerAnimator.SetBool("flappingAbove", true);
 
         playerInput.onActionTriggered += context =>
@@ -48,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
                 OnMove(context);
             if (context.action.name == InputActionConstants.Player.InputActionJump)
                 ChangeDirection(context);
+            if (context.action.name == InputActionConstants.Player.InputActionBoost)
+                Boost(context);
         };
     }
 
@@ -89,6 +99,28 @@ public class PlayerMovement : MonoBehaviour
         motionDirection = new Vector2(-motionDirection.x, motionDirection.y);
         if(ChangeDirectionHandler != null)
             ChangeDirectionHandler.Invoke(this, new EventArgs());
+    }
+
+    private void Boost(CallbackContext context)
+    {
+        if (playerMotion == PlayerMotion.Horizontal) return;
+
+        if (context.started)
+        {
+            Debug.Log("starting");
+            IsBoostActive = true;
+            uiManager.ShowBoostImage(true);
+            boostTimer = 0;
+        }
+        else if (context.canceled || boostTimer > maxBoostTime)
+        {
+            IsBoostActive = false;
+            uiManager.ShowBoostImage(false);
+        }
+        else if (context.performed)
+        {
+            boostTimer += Time.deltaTime;
+        }       
     }
 
     private void StopMoving()

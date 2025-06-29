@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SpawnObjectMovement : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class SpawnObjectMovement : MonoBehaviour
     GameObject player;
     PlayerMovement playerMovement;
     PlayerMotion playerMotion;
-
 
     public void Initialize(GameObject _player)
     {
@@ -39,8 +39,9 @@ public class SpawnObjectMovement : MonoBehaviour
         {
             var playerGoingRight = player.transform.localScale.x > 0;
 
+            float speedBoost = playerMovement.IsBoostActive ? 2f : 1f;
             var direction = playerGoingRight ? Vector3.left : Vector3.right; // spawn object go the opposite way.
-            transform.position += direction * speed * Time.deltaTime;
+            transform.position += direction * speed * speedBoost * Time.deltaTime;
 
             var relativePosition = Camera.main.WorldToViewportPoint(transform.position);
             if (relativePosition.x > 3f || relativePosition.x < -2f)

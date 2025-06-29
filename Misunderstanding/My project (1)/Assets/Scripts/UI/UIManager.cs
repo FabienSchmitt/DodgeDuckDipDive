@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -34,6 +35,10 @@ public class UIManager : MonoBehaviour
     [Header("Game end")]
     [SerializeField]
     private GameObject gameEndScreen;
+
+    [Header("Boost")]
+    [SerializeField]
+    private GameObject boostScreen;
 
     private PlayerInput playerInput;
     private PlayerMovement playerMovement;
@@ -211,5 +216,12 @@ public class UIManager : MonoBehaviour
         return dialogueBox.activeInHierarchy;
     }
 
+    #endregion
+
+    #region Boost
+    public void ShowBoostImage(bool enable)
+    {
+        boostScreen.SetActive(enable);
+    }
     #endregion
 }
