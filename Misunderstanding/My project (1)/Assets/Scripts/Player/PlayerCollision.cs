@@ -7,9 +7,12 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] AudioClip obstacleCollisionSound;
     [SerializeField] AudioClip encounterBirdSound;
     [SerializeField] AudioClip planetReachedSound;
-
+    
     UIManager uiManager;
     DialogueManager dialogueManager;
+    
+    public bool Invincible { get; set; } = false;
+    
     private void Awake()
     {
         uiManager = GameObject.FindAnyObjectByType<UIManager>();
@@ -18,7 +21,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag == "Obstacle" && !Invincible)
         {
             SoundManager.Instance.PlaySound(obstacleCollisionSound);
             uiManager.ShowGameOver();
