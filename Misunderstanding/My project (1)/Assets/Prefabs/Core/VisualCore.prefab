@@ -470,6 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55707ab9dfe6de64ea51716862cc0a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMusicTheme: {fileID: 8300000, guid: 3edd1b9cfcb2ad04fb728d70aa0fb673, type: 3}
   gameOverScreen: {fileID: 9035556510120449722}
   gameOverSound: {fileID: 8300000, guid: 7b1e341dcdd60604fad3e3b60a33f13f, type: 3}
   pauseScreen: {fileID: 1788399522861716273}
@@ -687,8 +688,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278232644
-  m_fontColor: {r: 0.26670596, g: 0.6509434, b: 0, a: 1}
+    rgba: 4288741283
+  m_fontColor: {r: 0.6392157, g: 1, b: 0.627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4198,8 +4199,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279343637
-  m_fontColor: {r: 0.08099357, g: 0.6039216, b: 0.066666655, a: 1}
+    rgba: 4288741283
+  m_fontColor: {r: 0.6382385, g: 1, b: 0.6273585, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4325,7 +4326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Who's dat bird?
+  m_text: Lost in migration
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6ed0188b7f300045a1497490b5e2150, type: 2}
   m_sharedMaterial: {fileID: -265585977522133677, guid: f6ed0188b7f300045a1497490b5e2150, type: 2}
@@ -4360,7 +4361,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4390,7 +4391,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -380.31003, y: 0, z: -352.54956, w: -144.35121}
+  m_margin: {x: -684.79376, y: 0, z: -586.12555, w: -144.35121}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

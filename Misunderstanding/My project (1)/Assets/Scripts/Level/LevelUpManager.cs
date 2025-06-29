@@ -7,6 +7,7 @@ public class LevelUpManager : MonoBehaviour
     private LevelTimer levelTimer;
 
     [SerializeField] TextMeshProUGUI victoryMessage;
+    [SerializeField] AudioClip levelMusicTheme;
     DialogueManager dialogueManager;
     private string[] GetLevelStartDialogue() => new string[]
     {
@@ -19,6 +20,8 @@ public class LevelUpManager : MonoBehaviour
 
     void Awake()
     {
+        if (!SoundManager.Instance.IsMusicThemePlaying(levelMusicTheme))
+            SoundManager.Instance.ChangeMusicTheme(levelMusicTheme);
         uiManager = FindFirstObjectByType<UIManager>();
         levelTimer = FindFirstObjectByType<LevelTimer>();
         dialogueManager = FindFirstObjectByType<DialogueManager>(FindObjectsInactive.Include);

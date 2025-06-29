@@ -8,6 +8,7 @@ public class LevelDownManager : MonoBehaviour
     [SerializeField] float maxDistance;
     [SerializeField] GameObject floor;
     [SerializeField] TextMeshProUGUI victoryMessage;
+    [SerializeField] AudioClip levelMusicTheme;
 
     private FloorTrigger floorTrigger;
     private float currentHeight;
@@ -25,6 +26,8 @@ public class LevelDownManager : MonoBehaviour
 
     private void Awake()
     {
+        if (!SoundManager.Instance.IsMusicThemePlaying(levelMusicTheme))
+            SoundManager.Instance.ChangeMusicTheme(levelMusicTheme);
         currentHeight = player.transform.position.y;
         minHeight = currentHeight - maxDistance;
 

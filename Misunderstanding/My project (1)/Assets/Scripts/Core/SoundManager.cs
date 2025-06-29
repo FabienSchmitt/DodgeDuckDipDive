@@ -40,6 +40,20 @@ public class SoundManager : MonoBehaviour
             soundEffectSource.PlayOneShot(audioClip);
     }
 
+    public bool IsMusicThemePlaying(AudioClip audioClip)
+    {
+        return musicSource.clip.name == audioClip.name;
+    }
+
+    public void ChangeMusicTheme(AudioClip audioClip)
+    {
+        if (audioClip != null)
+        {
+            musicSource.clip = audioClip;
+            musicSource.Play();
+        }
+    }
+
     public bool IsAudioSourcePlaying()
     {
         return soundEffectSource.isPlaying;
