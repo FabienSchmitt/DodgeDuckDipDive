@@ -22,7 +22,8 @@ public class SpawnObjectMovement : MonoBehaviour
     {
         player = _player;
         // flip sprite to go the opposite way of the player
-        FlipSprite(spriteRenderer.gameObject);
+        if(spriteRenderer != null)
+            FlipSprite(spriteRenderer.gameObject);
 
         // flip bird bubble randomly once every XX birds
         if(toldInReverseRandomizer.Next(toldInReverseOccurence) == 0)
