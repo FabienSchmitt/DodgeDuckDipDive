@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.PostProcessing;
 using static UnityEngine.InputSystem.InputAction;
 
 public enum PlayerMotion
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] AudioClip flappingSound;
     [SerializeField] AudioClip movingSound;
+    [SerializeField] PostProcessVolume volume;
 
     private PlayerInput playerInput;
     private Animator playerAnimator;
@@ -30,23 +33,29 @@ public class PlayerMovement : MonoBehaviour
     private UIManager uiManager;
     private Vector2 motionDirection;
     private bool doMove = false;
-    private float boostTimer = 0f;
-    private float maxBoostTime = 3f;
+    private float maxBoostTime = 1f;
 
 
     // Set to false when the zone appears. 
     public bool CanChangeDirection { get; set; } = true;
     public bool IsBoostActive { get; set; }
+    public bool CantStop { get; set; }
 
 
     public event EventHandler ChangeDirectionHandler;
 
+    
+    private MotionBlur motionBlur;
+    private ChromaticAberration chromaticAberration;
+
+   
     private void Awake()
     {
         TryGetComponent(out playerInput);
         TryGetComponent(out playerBody);
         TryGetComponent(out playerAnimator);
         uiManager = FindFirstObjectByType<UIManager>();
+
         if (playerMotion != PlayerMotion.Vertical)
             playerAnimator.SetBool("flappingAbove", true);
 
@@ -59,6 +68,13 @@ public class PlayerMovement : MonoBehaviour
             if (context.action.name == InputActionConstants.Player.InputActionBoost)
                 Boost(context);
         };
+
+        // Get the motion blur settings
+        if (volume != null)
+        {
+            volume.profile.TryGetSettings(out motionBlur);
+            volume.profile.TryGetSettings(out chromaticAberration);
+        }
     }
 
     private void OnMove(CallbackContext context)
@@ -104,23 +120,32 @@ public class PlayerMovement : MonoBehaviour
     private void Boost(CallbackContext context)
     {
         if (playerMotion == PlayerMotion.Horizontal) return;
+        if (CantStop) return; // it cannot stop. It's in the name.
 
+        Debug.Log("duration : " + context.duration);
         if (context.started)
         {
             Debug.Log("starting");
             IsBoostActive = true;
             uiManager.ShowBoostImage(true);
-            boostTimer = 0;
+            if (motionBlur != null)
+                motionBlur.enabled.value = true;
+            if (chromaticAberration != null)
+                chromaticAberration.enabled.value = true;
         }
-        else if (context.canceled || boostTimer > maxBoostTime)
+        else if (context.canceled && context.duration > maxBoostTime)
+        {
+            CantStop = true;
+        }
+        else if (context.canceled)
         {
             IsBoostActive = false;
+            if (motionBlur != null)
+                motionBlur.enabled.value = false;
+            if (chromaticAberration != null)
+                chromaticAberration.enabled.value = false;
             uiManager.ShowBoostImage(false);
         }
-        else if (context.performed)
-        {
-            boostTimer += Time.deltaTime;
-        }       
     }
 
     private void StopMoving()
