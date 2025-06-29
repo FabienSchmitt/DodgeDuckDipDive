@@ -911,7 +911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endZone: {fileID: 1546411880}
   player: {fileID: 1027728862}
-  endZoneSpawnTime: 45
+  endZoneSpawnTime: 30
   spawners:
   - {fileID: 1088794248}
   - {fileID: 1678626311}
@@ -1334,7 +1334,7 @@ Material:
     - _WidthHeightRadius: {r: 1850, g: 250, b: 80, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!21 &1723927589
+--- !u!21 &1728195365
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
