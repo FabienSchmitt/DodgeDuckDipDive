@@ -4,6 +4,7 @@ using UnityEngine;
 public class FloorTrigger : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] GameObject spawner;
     private UIManager uiManager;
     private DialogueManager dialogueManager;
 
@@ -20,11 +21,16 @@ public class FloorTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Floor")
         {
+            // Bird player start to fall (for real)
             var playerMovement = player.GetComponent<PlayerMovement>();
             playerMovement.NeedToMove();
 
+            // The floor stops its upward movement
             var floorMovemement = collision.gameObject.GetComponentInParent<SpawnObjectMovement>();
             floorMovemement.Stop();
+
+            //Disable spawners
+            spawner.gameObject.SetActive(false);
         }
 
         if (collision.gameObject.tag == "Player")
@@ -33,6 +39,8 @@ public class FloorTrigger : MonoBehaviour
             {
                 IsMole = true;
                 var playerAnimator = player.GetComponent<Animator>();
+                var playerCollision = player.GetComponent<PlayerCollision>();
+                playerCollision.Invincible = true;
                 var newScale = player.transform.localScale;
                 newScale.y = Math.Abs(newScale.y);
                 playerAnimator.SetBool("becomeMole", true);
