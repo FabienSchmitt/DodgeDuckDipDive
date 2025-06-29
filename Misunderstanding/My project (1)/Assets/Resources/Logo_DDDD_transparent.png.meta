@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: c1ee1510c1d481140a9e1adbd02dcafa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -158638017946345970
+    second: Logo_DDDD_transparent_0
+  - first:
+      213: -1134642112009186995
+    second: Logo_DDDD_transparent_1
+  - first:
+      213: 2683605447788443223
+    second: Logo_DDDD_transparent_2
+  - first:
+      213: -6961957973284604388
+    second: Logo_DDDD_transparent_3
+  - first:
+      213: -2971516823669358298
+    second: Logo_DDDD_transparent_4
+  - first:
+      213: 7580055131283129358
+    second: Logo_DDDD_transparent_5
+  - first:
+      213: -7578726656236692905
+    second: Logo_DDDD_transparent_6
+  - first:
+      213: 1205170415286159752
+    second: Logo_DDDD_transparent_7
+  - first:
+      213: -3228698120942636296
+    second: Logo_DDDD_transparent_8
+  - first:
+      213: -6683048722275258934
+    second: Logo_DDDD_transparent_9
+  - first:
+      213: 952471324620072859
+    second: Logo_DDDD_transparent_10
+  - first:
+      213: 6219455031073971696
+    second: Logo_DDDD_transparent_11
+  - first:
+      213: 8358835571162794068
+    second: Logo_DDDD_transparent_12
+  - first:
+      213: -7995132063271781179
+    second: Logo_DDDD_transparent_13
+  - first:
+      213: 2453027548718226884
+    second: Logo_DDDD_transparent_14
+  - first:
+      213: 1890879067877809493
+    second: Logo_DDDD_transparent_15
+  - first:
+      213: -5855760906683601907
+    second: Logo_DDDD_transparent_16
+  - first:
+      213: -6019530551555027368
+    second: Logo_DDDD_transparent_17
+  - first:
+      213: -2322530321876104961
+    second: Logo_DDDD_transparent_18
+  - first:
+      213: 336180127425560399
+    second: Logo_DDDD_transparent_19
+  - first:
+      213: 659215950284780173
+    second: Logo_DDDD_transparent_20
+  - first:
+      213: -4667532118664542455
+    second: Logo_DDDD_transparent_21
+  - first:
+      213: -6757403410190094801
+    second: Logo_DDDD_transparent_22
+  - first:
+      213: 1049246666424963115
+    second: Logo_DDDD_transparent_23
+  - first:
+      213: -5121411289237559309
+    second: Logo_DDDD_transparent_24
+  - first:
+      213: -287635224627924885
+    second: Logo_DDDD_transparent_25
+  - first:
+      213: 7085828907959031759
+    second: Logo_DDDD_transparent_26
+  - first:
+      213: -5912524074380674532
+    second: Logo_DDDD_transparent_27
+  - first:
+      213: 7988745567919968047
+    second: Logo_DDDD_transparent_28
+  - first:
+      213: 6343019584084023959
+    second: Logo_DDDD_transparent_29
+  - first:
+      213: 3178189450352562220
+    second: Logo_DDDD_transparent_30
+  - first:
+      213: -6033835256057251529
+    second: Logo_DDDD_transparent_31
+  - first:
+      213: -6458233020772903014
+    second: Logo_DDDD_transparent_32
+  - first:
+      213: -8510430756983698076
+    second: Logo_DDDD_transparent_33
+  - first:
+      213: -7121904479375408184
+    second: Logo_DDDD_transparent_34
+  - first:
+      213: -3267314890210239782
+    second: Logo_DDDD_transparent_35
+  - first:
+      213: 8186962795527598303
+    second: Logo_DDDD_transparent_36
+  - first:
+      213: 6163657241631822696
+    second: Logo_DDDD_transparent_37
+  - first:
+      213: -4330045259036763655
+    second: Logo_DDDD_transparent_38
+  - first:
+      213: 9002850243071253169
+    second: Logo_DDDD_transparent_39
+  - first:
+      213: -1672588134541821661
+    second: Logo_DDDD_transparent_40
+  - first:
+      213: 3350441845113408170
+    second: Logo_DDDD_transparent_41
+  - first:
+      213: 9033538590397539416
+    second: Logo_DDDD_transparent_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_0
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 758
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e9f6c20976ccdf0800000000000000
+      internalID: -158638017946345970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 628
+        width: 87
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d415e7eb201f040f0800000000000000
+      internalID: -1134642112009186995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_2
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 627
+        width: 106
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756bbb8bfe41e3520800000000000000
+      internalID: 2683605447788443223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_3
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 628
+        width: 84
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c163c2dfb18226f90800000000000000
+      internalID: -6961957973284604388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_4
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 626
+        width: 99
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6214711513d03c6d0800000000000000
+      internalID: -2971516823669358298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_5
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 628
+        width: 66
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0402062bf3c13960800000000000000
+      internalID: 7580055131283129358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_6
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 624
+        width: 106
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a5a3d8244f2d690800000000000000
+      internalID: -7578726656236692905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_7
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 553
+        width: 94
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88901f08b10a9b010800000000000000
+      internalID: 1205170415286159752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_8
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 596
+        width: 100
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23e365a2c5133d0800000000000000
+      internalID: -3228698120942636296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_9
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 499
+        width: 86
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acda72c689a0143a0800000000000000
+      internalID: -6683048722275258934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 498
+        width: 82
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97a9b29f9bd73d00800000000000000
+      internalID: 952471324620072859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_11
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 498
+        width: 85
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd1eaf0661ff4650800000000000000
+      internalID: 6219455031073971696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_12
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 499
+        width: 87
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458ce0b3aac800470800000000000000
+      internalID: 8358835571162794068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_13
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 518
+        width: 61
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc795c9fb59b0190800000000000000
+      internalID: -7995132063271781179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_14
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 513
+        width: 59
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdd8911f87ea0220800000000000000
+      internalID: 2453027548718226884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_15
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 443
+        width: 113
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d14127e70cd3a10800000000000000
+      internalID: 1890879067877809493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_16
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 481
+        width: 110
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c21830b782cbea0800000000000000
+      internalID: -5855760906683601907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_17
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 515
+        width: 43
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e83ff2bd4567ca0800000000000000
+      internalID: -6019530551555027368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_18
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 371
+        width: 86
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff840804af6b4cfd0800000000000000
+      internalID: -2322530321876104961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_19
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 371
+        width: 26
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ffeb37b0a5aa400800000000000000
+      internalID: 336180127425560399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_20
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 371
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82fef20a61062900800000000000000
+      internalID: 659215950284780173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 375
+        width: 207
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90706498448993fb0800000000000000
+      internalID: -4667532118664542455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_22
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 436
+        width: 133
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e2b939661e832a0800000000000000
+      internalID: -6757403410190094801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_23
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 441
+        width: 43
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20d502b84caf8e00800000000000000
+      internalID: 1049246666424963115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_24
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 396
+        width: 92
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7e15c11971de8b0800000000000000
+      internalID: -5121411289237559309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_25
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 408
+        width: 86
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60b923894d120cf0800000000000000
+      internalID: -287635224627924885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_26
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 423
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7971679dbe55260800000000000000
+      internalID: 7085828907959031759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_27
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 374
+        width: 127
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a38942eae72fda0800000000000000
+      internalID: -5912524074380674532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_28
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 396
+        width: 65
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f88d094c9bdde60800000000000000
+      internalID: 7988745567919968047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_29
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 245
+        width: 86
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a9ca874bee60850800000000000000
+      internalID: 6343019584084023959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_30
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 245
+        width: 27
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20982167723b1c20800000000000000
+      internalID: 3178189450352562220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_31
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 245
+        width: 98
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739ba71adc2834ca0800000000000000
+      internalID: -6033835256057251529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_32
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 245
+        width: 62
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a971228e84fbf56a0800000000000000
+      internalID: -6458233020772903014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_33
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 150
+        width: 50
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d8d641150e4e980800000000000000
+      internalID: -8510430756983698076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_34
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 150
+        width: 52
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3c0960c99e92d90800000000000000
+      internalID: -7121904479375408184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_35
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 149
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada9ca71b6a28a2d0800000000000000
+      internalID: -3267314890210239782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_36
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 150
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0f2c0494fed9170800000000000000
+      internalID: 8186962795527598303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_37
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 149
+        width: 54
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8639ab4da95b98550800000000000000
+      internalID: 6163657241631822696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_38
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 149
+        width: 59
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9dfb947c698e3c0800000000000000
+      internalID: -4330045259036763655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_39
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 151
+        width: 48
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba1d40d89c80fc70800000000000000
+      internalID: 9002850243071253169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_40
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 150
+        width: 18
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329f91114f5c9c8e0800000000000000
+      internalID: -1672588134541821661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_41
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 149
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaac6925b192f7e20800000000000000
+      internalID: 3350441845113408170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_DDDD_transparent_42
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 150
+        width: 57
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854ad697c739d5d70800000000000000
+      internalID: 9033538590397539416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Logo_DDDD_transparent_0: -158638017946345970
+      Logo_DDDD_transparent_1: -1134642112009186995
+      Logo_DDDD_transparent_10: 952471324620072859
+      Logo_DDDD_transparent_11: 6219455031073971696
+      Logo_DDDD_transparent_12: 8358835571162794068
+      Logo_DDDD_transparent_13: -7995132063271781179
+      Logo_DDDD_transparent_14: 2453027548718226884
+      Logo_DDDD_transparent_15: 1890879067877809493
+      Logo_DDDD_transparent_16: -5855760906683601907
+      Logo_DDDD_transparent_17: -6019530551555027368
+      Logo_DDDD_transparent_18: -2322530321876104961
+      Logo_DDDD_transparent_19: 336180127425560399
+      Logo_DDDD_transparent_2: 2683605447788443223
+      Logo_DDDD_transparent_20: 659215950284780173
+      Logo_DDDD_transparent_21: -4667532118664542455
+      Logo_DDDD_transparent_22: -6757403410190094801
+      Logo_DDDD_transparent_23: 1049246666424963115
+      Logo_DDDD_transparent_24: -5121411289237559309
+      Logo_DDDD_transparent_25: -287635224627924885
+      Logo_DDDD_transparent_26: 7085828907959031759
+      Logo_DDDD_transparent_27: -5912524074380674532
+      Logo_DDDD_transparent_28: 7988745567919968047
+      Logo_DDDD_transparent_29: 6343019584084023959
+      Logo_DDDD_transparent_3: -6961957973284604388
+      Logo_DDDD_transparent_30: 3178189450352562220
+      Logo_DDDD_transparent_31: -6033835256057251529
+      Logo_DDDD_transparent_32: -6458233020772903014
+      Logo_DDDD_transparent_33: -8510430756983698076
+      Logo_DDDD_transparent_34: -7121904479375408184
+      Logo_DDDD_transparent_35: -3267314890210239782
+      Logo_DDDD_transparent_36: 8186962795527598303
+      Logo_DDDD_transparent_37: 6163657241631822696
+      Logo_DDDD_transparent_38: -4330045259036763655
+      Logo_DDDD_transparent_39: 9002850243071253169
+      Logo_DDDD_transparent_4: -2971516823669358298
+      Logo_DDDD_transparent_40: -1672588134541821661
+      Logo_DDDD_transparent_41: 3350441845113408170
+      Logo_DDDD_transparent_42: 9033538590397539416
+      Logo_DDDD_transparent_5: 7580055131283129358
+      Logo_DDDD_transparent_6: -7578726656236692905
+      Logo_DDDD_transparent_7: 1205170415286159752
+      Logo_DDDD_transparent_8: -3228698120942636296
+      Logo_DDDD_transparent_9: -6683048722275258934
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
