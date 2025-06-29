@@ -7,8 +7,12 @@ public class SpawnObjectMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] BoxCollider2D boxCollider;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject optionalSecondaryGameObject;
     [SerializeField] bool canBeDestroyed = true;
     [SerializeField] float secondarySpeed;
+    [SerializeField] int toldInReverseOccurence;
+
+    private static System.Random toldInReverseRandomizer = new();
         
     GameObject player;
     PlayerMovement playerMovement;
@@ -18,14 +22,23 @@ public class SpawnObjectMovement : MonoBehaviour
     {
         player = _player;
         // flip sprite to go the opposite way of the player
-        if (spriteRenderer != null)
-        {
-            if (Mathf.Sign(spriteRenderer.transform.localScale.x) == Mathf.Sign(player.transform.localScale.x))
-                spriteRenderer.transform.localScale = new Vector2(-spriteRenderer.transform.localScale.x, spriteRenderer.transform.localScale.y);
-        }
+        FlipSprite(spriteRenderer.gameObject);
+
+        // flip bird bubble randomly once every XX birds
+        if(toldInReverseRandomizer.Next(toldInReverseOccurence) == 0)
+            FlipSprite(optionalSecondaryGameObject);
 
         playerMovement = player.GetComponent<PlayerMovement>();
         playerMotion = playerMovement.GetPlayerMotion();
+    }
+
+    private void FlipSprite(GameObject _gameObject)
+    {
+        if (_gameObject != null)
+        {
+            if (Mathf.Sign(_gameObject.transform.localScale.x) == Mathf.Sign(player.transform.localScale.x))
+                _gameObject.transform.localScale = new Vector2(-_gameObject.transform.localScale.x, _gameObject.transform.localScale.y);
+        }
     }
 
     public void Stop()
