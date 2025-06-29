@@ -7,6 +7,9 @@ public class UIManager : MonoBehaviour
 {
     #region Parameters
 
+
+    [SerializeField] AudioClip mainMusicTheme;
+
     [Header("Game over")]
     [SerializeField]
     private GameObject gameOverScreen;
@@ -151,6 +154,8 @@ public class UIManager : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
+        if(!SoundManager.Instance.IsMusicThemePlaying(mainMusicTheme))
+            SoundManager.Instance.ChangeMusicTheme(mainMusicTheme);
     }
 
     public void QuitGame()
