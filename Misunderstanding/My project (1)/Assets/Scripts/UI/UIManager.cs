@@ -72,6 +72,9 @@ public class UIManager : MonoBehaviour
     {
         if (context.control.device is Mouse || !context.started)
             return;
+        
+        if (IsGameEndingScreenShowing() || IsGameOverScreenShowing())
+            return;
 
         if (pauseScreen.activeInHierarchy)
             ShowPauseScreen(false);

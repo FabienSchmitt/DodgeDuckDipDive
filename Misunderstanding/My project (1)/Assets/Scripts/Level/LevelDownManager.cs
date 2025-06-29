@@ -9,6 +9,7 @@ public class LevelDownManager : MonoBehaviour
     [SerializeField] GameObject floor;
     [SerializeField] TextMeshProUGUI victoryMessage;
     [SerializeField] AudioClip levelMusicTheme;
+    [SerializeField] AudioClip moleSound;
 
     private FloorTrigger floorTrigger;
     private float currentHeight;
@@ -49,6 +50,8 @@ public class LevelDownManager : MonoBehaviour
     {
         if (floorTrigger.IsMole)
         {
+            if (!uiManager.IsGameEndingScreenShowing() && !SoundManager.Instance.IsAudioSourcePlaying())
+                SoundManager.Instance.PlaySound(moleSound);
             ManageGameEnding();
         }
     }
@@ -65,7 +68,7 @@ public class LevelDownManager : MonoBehaviour
 
     private System.Collections.IEnumerator ShowGameEnding()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         uiManager.ShowGameEnd(true);
     }
 }
